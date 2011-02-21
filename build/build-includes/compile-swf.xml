@@ -109,12 +109,12 @@
             <equals arg1="${os.name}" arg2="Mac OS X"/>
             <then>
                 <exec executable="open">
-                    <arg line="-a ${browser} ${bin.loc}/index.html"/>
+                    <arg line="-a ${browser} ${app.url}"/>
                 </exec>
             </then>
             <else>
                 <exec executable="${browser}">
-                    <arg line="file:///${bin.loc}/index.html"/>
+                    <arg line="${app.url}"/>
                 </exec>
             </else>
         </if>
